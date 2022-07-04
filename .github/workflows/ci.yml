@@ -1,9 +1,9 @@
 # Commented out for the new yml
 name: CI
-env:
-  SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
-  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+# env:
+#   SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
+#   SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+#   SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
 
 on:
   push:
@@ -44,7 +44,7 @@ jobs:
         # cd my-app
         npm start &
         npx wait-on --timeout 60000
-    - name: Run visual tests 👁
+    - name: Run tests 👁
       run: |
         # cd my-app
-        npm run test:visual
+        npm run test
